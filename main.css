@@ -1,0 +1,29 @@
+body {
+  background-color: darkgray;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+}
+
+#square {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 10rem;
+
+  background-color: tomato;
+
+  transition: background-color .2s;
+  transform: perspective(600px)
+             rotateX(40deg);
+}
+
+#square:hover {
+  cursor: pointer;
+}
