@@ -10,7 +10,7 @@ document.addEventListener('mousemove', (e) => {
 });
 
 perspectiveSquare.addEventListener('click', (e) => {
-  const POSSIBLE_COLORS = ['tomato', 'skyblue', 'lightgray', 'orange', 'black', 'yellow', 'yellowgreen'];
+  const POSSIBLE_COLORS = ['tomato', 'skyblue', 'lightgray', 'orange', 'black', 'yellow', 'yellowgreen', 'white'];
   const possibleNextColors = POSSIBLE_COLORS.filter(
     color => color != perspectiveSquare.style.backgroundColor
   );
