@@ -9,12 +9,20 @@ document.addEventListener('mousemove', (e) => {
                                        rotateZ(${zRotation}deg)`;
 });
 
-perspectiveSquare.addEventListener('click', (e) => {
-  const POSSIBLE_COLORS = ['tomato', 'skyblue', 'lightgray', 'orange', 'black', 'yellow', 'yellowgreen', 'white'];
+const pickRandomColorFromList = () => {
+  const POSSIBLE_COLORS = [
+    'tomato', 'skyblue', 'lightgray', 'orange',
+    'black', 'yellow', 'yellowgreen', 'white'
+  ];
+
   const possibleNextColors = POSSIBLE_COLORS.filter(
     color => color != perspectiveSquare.style.backgroundColor
   );
   const randomColorIndex = Math.floor(Math.random() * possibleNextColors.length);
+  
+  return possibleNextColors[randomColorIndex];
+};
 
-  perspectiveSquare.style.backgroundColor = possibleNextColors[randomColorIndex];
+perspectiveSquare.addEventListener('click', (e) => {
+  perspectiveSquare.style.backgroundColor = pickRandomColorFromList();
 });
